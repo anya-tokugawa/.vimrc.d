@@ -4,11 +4,11 @@
 
 ## Bundling
 
-- Make `.vim`
+- Make `.vim/` and `.vimrc`
 - Install Bundle Plugin
 
 
-## Installration
+## Installation
 
 ```sh
 cd ~/
