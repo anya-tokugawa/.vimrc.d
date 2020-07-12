@@ -13,7 +13,6 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'mattn/emmet-vim'
 " Window Resizer Ctrl+E and hjkl
 Plugin 'simeji/winresizer'
-Plugin 'jreybert/vimagit'
 
 "colorscheme
 Plugin 'gmist/vim-palette'
