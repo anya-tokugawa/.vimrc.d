@@ -1,0 +1,7 @@
+source /home/eric/.vimrc.d/airline.bundleconf
+source /home/eric/.vimrc.d/onelime.bundleconf
+source /home/eric/.vimrc.d/pukiwiki.bundleconf
+source /home/eric/.vimrc.d/vim-indent-guides.bundleconf
+source /home/eric/.vimrc.d/vim-lsp.bundleconf
+source /home/eric/.vimrc.d/vim-trailing-whitespace.bundleconf
+source /home/eric/.vimrc.d/wordcount.bundleconf

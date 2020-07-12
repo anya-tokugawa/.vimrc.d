@@ -1,0 +1,5 @@
+Bundle 'prabirshrestha/async.vim'
+Bundle 'prabirshrestha/vim-lsp'
+
+Bundle 'mattn/vim-lsp-settings'
+

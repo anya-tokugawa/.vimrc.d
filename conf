@@ -1,0 +1,24 @@
+
+" Settings for Bundle
+source ~/.vim/bundle/vundle/test/minirc.vim
+
+Bundle 'basyura/TweetVim'
+Bundle 'mattn/webapi-vim'
+Bundle 'basyura/twibill.vim'
+Bundle 'tyru/open-browser.vim'
+" Bundle 'h1mesuke/unite-outline.vim'
+Bundle 'basyura/bitly.vim'
+Bundle 'Shougo/unite.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'w0rp/ale'
+Bundle 'tpope/vim-commentary'
+Bundle 'vim-airline/vim-airline'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'Shougo/deoplete.nvim'
+Bundle 'mattn/emmet-vim'
+" Show Indent depth
+Bundle 'nathanaelkane/vim-indent-guides'
+
+" Enable Displaying Indent depth
+let g:indent_guides_enable_on_vim_startup = 1
+

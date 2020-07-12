@@ -1,0 +1,6 @@
+" Show Indent depth
+Bundle 'nathanaelkane/vim-indent-guides'
+
+" Enable Displaying Indent depth
+let g:indent_guides_enable_on_vim_startup = 1
+

@@ -1,0 +1,35 @@
+Plugin 'basyura/TweetVim'
+Plugin 'mattn/webapi-vim'
+Plugin 'basyura/twibill.vim'
+Plugin 'tyru/open-browser.vim'
+" Plugin 'h1mesuke/unite-outline.vim'
+Plugin 'basyura/bitly.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'w0rp/ale'
+Plugin 'tpope/vim-commentary'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'mattn/emmet-vim'
+" Window Resizer Ctrl+E and hjkl
+Plugin 'simeji/winresizer'
+
+Plugin 'jreybert/vimagit'
+
+
+" Syntastics
+Plugin 'tpope/vim-pathogen'
+Plugin 'scrooloose/syntastic'
+call pathogen#infect()
+
+" :Rename -> :Ren
+Plugin 'qpkorr/vim-renamer'
+
+
+" auto close quotes, parens, brakets... etc...
+Plugin 'Raimondi/delimitMate'
+"show indent line
+Plugin 'Yggdroot/indentLine'
+
+
+

@@ -1,0 +1,9 @@
+Bundle 'syngan/vim-pukiwiki'
+
+" PukiWiki のサイト情報 "
+let g:pukiwiki_config = {
+	\	"eric" : {
+	\		"url" : "https://wiki.eric-lightning.info",
+	\		"top" : "FrontPage",
+	\	},
+	\}
