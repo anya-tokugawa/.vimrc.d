@@ -1,6 +1,6 @@
 #!/bin/bash -ux
 ln -s $HOME/.vimrc.d/vimrc.txt $HOME/.vimrc
-$HOME/.vimrc.d/auto-insert.sh
+$HOME/.vimrc.d/mktools/auto-insert.sh
 
 : "Bundle Settings"
 mkdir -p ~/.vim/bundle
