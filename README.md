@@ -1,6 +1,6 @@
 # VIM RunCommand Configration
 
-![Image](image.png)
+![Image](etc/image.png)
 
 ## Bundling
 
@@ -11,12 +11,11 @@
 ## Installation
 
 ```sh
-cd ~/
-git clone git@github.com:Eric-lightning/.vimrc.d
-cd .vimrc.d
-chmod u+x setup.sh
-./setup.sh # Setup and Install Bundle/Colorscheme
+git clone git@github.com:Eric-lightning/.vimrc.d $HOME/
+$HOME/.vimrc.d/setup.sh # Setup and Install Bundle/Colorscheme
 ```
 
+## Performance
 
-
+- see [TIME.log](etc/TIME.log)!
+- spend about 160msec.
