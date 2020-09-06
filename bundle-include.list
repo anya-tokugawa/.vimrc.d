@@ -1,7 +1,0 @@
-source /home/j17273yn/.vimrc.d/airline.bundleconf
-source /home/j17273yn/.vimrc.d/oneline.bundleconf
-source /home/j17273yn/.vimrc.d/pukiwiki.bundleconf
-source /home/j17273yn/.vimrc.d/vim-indent-guides.bundleconf
-source /home/j17273yn/.vimrc.d/vim-lsp.bundleconf
-source /home/j17273yn/.vimrc.d/vim-trailing-whitespace.bundleconf
-source /home/j17273yn/.vimrc.d/wordcount.bundleconf

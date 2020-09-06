@@ -1,8 +1,0 @@
-source /home/j17273yn/.vimrc.d/00-vundle.conf
-source /home/j17273yn/.vimrc.d/clipboard.conf
-source /home/j17273yn/.vimrc.d/colorscheme.conf
-source /home/j17273yn/.vimrc.d/comment.conf
-source /home/j17273yn/.vimrc.d/display.conf
-source /home/j17273yn/.vimrc.d/encoding.conf
-source /home/j17273yn/.vimrc.d/search.conf
-source /home/j17273yn/.vimrc.d/write.conf
