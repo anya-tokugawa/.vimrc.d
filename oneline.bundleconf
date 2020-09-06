@@ -20,7 +20,6 @@ Plugin 'gmist/vim-palette'
 " Syntastics
 Plugin 'tpope/vim-pathogen'
 Plugin 'scrooloose/syntastic'
-call pathogen#infect()
 
 " :Rename -> :Ren
 Plugin 'qpkorr/vim-renamer'
