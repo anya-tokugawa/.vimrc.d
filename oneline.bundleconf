@@ -6,7 +6,6 @@ Plugin 'tyru/open-browser.vim'
 Plugin 'basyura/bitly.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'w0rp/ale'
 Plugin 'tpope/vim-commentary'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'Shougo/deoplete.nvim'
@@ -18,8 +17,7 @@ Plugin 'simeji/winresizer'
 Plugin 'gmist/vim-palette'
 
 " Syntastics
-Plugin 'tpope/vim-pathogen'
-Plugin 'scrooloose/syntastic'
+"Plugin 'tpope/vim-pathogen'
 
 " :Rename -> :Ren
 Plugin 'qpkorr/vim-renamer'
