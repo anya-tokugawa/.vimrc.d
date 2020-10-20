@@ -16,6 +16,9 @@ Plugin 'simeji/winresizer'
 "colorscheme
 Plugin 'gmist/vim-palette'
 
+" git-diff
+Plugin 'airblade/vim-gitgutter'
+
 " Syntastics
 "Plugin 'tpope/vim-pathogen'
 
