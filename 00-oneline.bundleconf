@@ -5,7 +5,6 @@ Plugin 'tyru/open-browser.vim'
 " Plugin 'h1mesuke/unite-outline.vim'
 Plugin 'basyura/bitly.vim'
 Plugin 'Shougo/unite.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'Shougo/deoplete.nvim'
@@ -18,6 +17,15 @@ Plugin 'gmist/vim-palette'
 
 " git-diff
 Plugin 'airblade/vim-gitgutter'
+
+" GitCommit
+Plugin 'tpope/vim-fugitive'
+Plugin 'junegunn/gv.vim'
+
+" nerdtree file manager
+Plugin 'preservim/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
+
 
 " Syntastics
 "Plugin 'tpope/vim-pathogen'
