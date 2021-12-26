@@ -1,0 +1,4 @@
+; show diagnostics mesg to status bar
+let g:lsp_diagnostics_echo_cursor = 1
+; save document with DocumentFormat
+autocmd BufWritePre <buffer> LspDocumentFormatSync
