@@ -18,14 +18,18 @@ Plugin 'gmist/vim-palette'
 " git-diff
 Plugin 'airblade/vim-gitgutter'
 
+" tabbar
+Plugin 'preservim/tagbar'
+
 " GitCommit
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/gv.vim'
 
 " nerdtree file manager
 Plugin 'preservim/nerdtree'
-Plugin 'ryanoasis/vim-devicons'
 
+" File Devicons
+Plugin 'ryanoasis/vim-devicons'
 
 " Syntastics
 "Plugin 'tpope/vim-pathogen'
@@ -33,11 +37,11 @@ Plugin 'ryanoasis/vim-devicons'
 " :Rename -> :Ren
 Plugin 'qpkorr/vim-renamer'
 
-
 " auto close quotes, parens, brakets... etc...
 Plugin 'Raimondi/delimitMate'
 "show indent line
 Plugin 'Yggdroot/indentLine'
 
 
+Plugin 'tribela/vim-transparent'
 
