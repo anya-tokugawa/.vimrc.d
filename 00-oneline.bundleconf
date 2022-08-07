@@ -45,3 +45,4 @@ Plugin 'Yggdroot/indentLine'
 
 Plugin 'tribela/vim-transparent'
 
+Plugin 'Drawit'

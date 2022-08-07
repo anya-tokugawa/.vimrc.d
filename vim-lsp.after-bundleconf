@@ -1,0 +1,16 @@
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
+call lsp#register_server({
+            \ 'name': 'clangd',
+            \ 'cmd': {server_info->['clangd']},
+            \ 'whitelist': ['c', 'cpp','cc'],
+            \ })
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 1
+
+" autocmd FileType cpp setlocal omnifunc=lsp#complete
+
+let g:lsp_document_highlight_enabled = 0
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_cxx_hl_use_text_props = 1
+
