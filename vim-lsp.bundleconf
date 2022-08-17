@@ -1,5 +1,4 @@
 Bundle 'prabirshrestha/async.vim'
 Bundle 'prabirshrestha/vim-lsp'
-
 Bundle 'mattn/vim-lsp-settings'
-
+Bundle 'jackguo380/vim-lsp-cxx-highlight'
