@@ -1,4 +1,5 @@
-/bundle-include.list
-/bundle-after.list
-/backups/
+/etc/backups/
 /config
+/oldconf
+/newconf
+/cache
