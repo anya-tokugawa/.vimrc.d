@@ -1,0 +1,198 @@
+set rtp+=~/.fzf
+set rtp+=~/.vim/bundle/Vundle.vim
+"-----------------------------------
+" Vundle Seting
+"-----------------------------------
+set nocompatible
+syntax on
+filetype off
+
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+source ~/.vimrc.d/cache/plugins.conf
+
+call vundle#end()
+
+source ~/.vimrc.d/cache/noplugins.conf
+
+"-----------------------------------
+
+set autowrite
+set write
+set modifiable
+set signcolumn=yes
+set updatetime=300 " RefleshTime
+colorscheme molokai
+set background=light
+set background=dark
+" Note: 正常にダークモードにする措置
+" 改行時のコメントアウトの挙動
+" https://vim-jp.org/vimdoc-ja/change.html#fo-table
+set formatoptions-=roq
+set backspace=indent,eol,start
+set history=500
+set ruler
+set scrolloff=5
+set number
+set expandtab
+set showtabline=2
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set shiftround
+set smarttab
+set wildmenu
+set laststatus=2
+set showcmd
+set showmatch
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+filetype plugin indent on
+filetype plugin on
+set mouse=a
+set title
+set showmatch
+set nowrap
+set spell
+set spelllang=en,cjk
+hi clear SpellBad
+hi SpellBad cterm=underline
+"Default
+set encoding=utf-8
+" Saved Encoding
+set fenc=utf8
+set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
+"CR/LF FormatType
+set fileformats=unix,mac,dos
+
+"-----------------------------------
+" searchAnd_viminfo.conf
+"-----------------------------------
+"when arrive to last result, return to first.
+set wrapscan
+
+"When doing to input, display result.
+set incsearch
+set viminfo=
+
+" 94-gitgutter.conf
+"-----------------------------------
+
+
+let g:gitgutter_all = 1
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs   = 1
+let g:gitgutter_set_sign_backgrounds = 1
+let g:gitgutter_highlight_lines = 0
+let g:gitgutter_highlight_linenrs = 1
+let g:gitgutter_override_sign_column_highlight = 1
+
+highlight! link SignColumn LineNr
+highlight SognColumn ctermbg=black " Column bgcolor
+" colors
+highlight GitGutterAdd    guifg=#57ca32 ctermfg=2
+highlight GitGutterChange guifg=#caca32 ctermfg=3
+highlight GitGutterDelete guifg=#ca3232 ctermfg=1
+" line
+highlight GitGutterAddLine    guibg=#007209 ctermbg=22
+highlight GitGutterChangeLine guibg=#a0a200 ctermbg=58
+highlight GitGutterDeleteLine guibg=#970000 ctermbg=52
+
+highlight link GitGutterChangeLine DiffText
+
+"-----------------------------------
+
+highlight lspReference ctermfg=red guifg=red ctermbg=green guibg=green
+highlight link LspErrorHighlight ErrorMsg
+highlight link LspWarningHighlight WarningMsg
+highlight link LspInfoHighlight InfoMsg
+
+" C-VでテキストをYankし，自動的にクリップボードにコピーする
+set clipboard=unnamedplus,autoselect,exclude:.*
+" WSL用
+  augroup myYank
+    autocmd!
+    autocmd TextYankPost * :call system('clip.exe', @")
+  augroup END
+
+" Antialias enable
+
+if has('mac') && has('gui_running')
+   set antialias
+endif
+
+"-----------------------------------
+" git.conf
+"-----------------------------------
+hi diffAdded   ctermfg=green
+hi diffRemoved ctermfg=red
+"-----------------------------------
+" go.conf
+"-----------------------------------
+augroup LspGo
+  au!
+  autocmd User lsp_setup call lsp#register_server({
+      \ 'name': 'go-lang',
+      \ 'cmd': {server_info->['gopls']},
+      \ 'whitelist': ['go'],
+      \ })
+  autocmd FileType go setlocal omnifunc=lsp#complete
+  "autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+  "autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+  "autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+augroup END
+
+"-----------------------------------
+" session.conf
+"-----------------------------------
+" session path
+let s:session_path = expand('~/.vim/sessions')
+
+if !isdirectory(s:session_path)
+    call mkdir(s:session_path, "p")
+endif"
+
+" save session
+command! -nargs=1 SaveSession call s:saveSession(<f-args>)
+
+function! s:saveSession(file)
+    execute 'silent mksession!' s:session_path . '/' . a:file
+endfunction
+
+
+" load session
+command! -nargs=1 LoadSession call s:loadSession(<f-args>)
+function! s:loadSession(file)
+    "execute 'silent source' a:file
+    execute 'silent source' s:session_path . '/' . a:file
+endfunction
+
+
+" delete session
+command! -nargs=1 DeleteSession call s:deleteSession(<f-args>)
+function! s:deleteSession(file)
+    call delete(expand(a:file))
+endfunction
+
+
+"----------------------------------------------------
+" vimrc local config
+"----------------------------------------------------
+augroup vimrc-local
+  autocmd!
+  autocmd BufNewFile,BufReadPost * call s:vimrc_local(getcwd())
+augroup END
+
+function! s:vimrc_local(loc)
+  let files = findfile('.vimrc_local', a:loc . ';', -1)
+  for i in reverse(filter(files, 'filereadable(v:val)'))
+    source `=i`
+  endfor
+endfunction
+
+" include auth
+
+source ~/.vimrc.d/cache/auth.conf
